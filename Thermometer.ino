@@ -7,7 +7,7 @@
 #include <Adafruit_SSD1306.h>
 
 // Hier wird der Eingangs-Pin deklariert, an dem das Sensor-Modul angeschlossen ist
-#define KY001_Signal_PIN 4
+#define KY001_Signal_PIN 2
 
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 #define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
