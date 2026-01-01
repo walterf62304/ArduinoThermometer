@@ -7,7 +7,7 @@
 #include <Adafruit_SSD1306.h>
 
 // Hier wird der Eingangs-Pin deklariert, an dem das Sensor-Modul angeschlossen ist
-#define KY001_Signal_PIN 4
+#define KY001_Signal_PIN 2
 
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 #define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
@@ -48,7 +48,7 @@ void loop() {
   display.setCursor(40,15);             // Start at top-left corner
   display.setTextSize(2);             // Draw 2X-scale text
   display.setTextColor(SSD1306_WHITE);
-  display.println(sensors.getTempCByIndex(0));
+  display.println(((float)((int)(sensors.getTempCByIndex(0)*100)))/100);
 
   display.display();
 
